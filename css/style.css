@@ -25,13 +25,27 @@ nav > a{
     align-items: center;
 }
 
-.photo-banner {
+/* .photo-banner {
     height: 250px;
     background-image: url(https://picsum.photos/1000);
     background-size: cover;
     background-position: center;
 
+} */
+.photo-banner {
+    position: relative;
+    width: 100; /* Sesuaikan dengan ukuran gambar */
+    height: 500px; /* Sesuaikan dengan ukuran gambar */
+    overflow: hidden; /* Menyembunyikan gambar yang melampaui kontainer */
 }
+
+.img-slideshow {
+    display: none; /* Sembunyikan semua gambar secara default */
+    width: 100%; /* Atur lebar gambar agar sesuai kontainer */
+    height: auto; /* Atur tinggi gambar otomatis */
+}
+
+
 
 /* .profile-article {
     height: 400px;
@@ -51,10 +65,10 @@ nav > a{
 }
 
 .lokasi {
-    border: 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -102,27 +116,124 @@ nav > a{
     background-position: center;
     border-radius: 50%;
 }
-
-.message-container {
-    display: flex;
-}
-
 #section-profile{
     background-color: #fffcf2;
 }
 
-table {
-    width: 100%; /* Mengatur lebar tabel menjadi 100% */
-    border-collapse: collapse; /* Menghilangkan jarak antara sel */
+/* table {
+    width: 100%; 
+    border-collapse: collapse;
 }
 
 td {
-    text-align: center; /* Rata tengah untuk teks di dalam sel */
-    padding: 10px; /* Memberikan jarak di dalam sel */
-    vertical-align: top; /* Mengatur agar konten berada di bagian atas sel */
+    text-align: center; 
+    padding: 10px;
+    vertical-align: top; 
 }
 
 img {
-    max-width: 100%; /* Membuat gambar responsif */
+    max-width: 100%;
     height: auto; /
+} */
+
+input[type="date"] {
+    width: calc(50ch);
+    padding: 8px;
 }
+
+input[type="text"] {
+    width: calc(49.5ch);
+    padding: 8px;
+}
+
+button {
+    width: calc(66.6ch);
+    padding: 8px;
+    background-color: #bde0fe;
+    border: none;
+}
+
+button:hover {
+    background-color: #a2d2ff
+}
+
+input[type="date"],
+input[type="text"],
+textarea {
+    border: 1px solid #808080;
+}
+
+.hidden {
+    display: none;
+}
+
+.message-container p {
+    display: block; /* Memastikan setiap <p> tampil dalam blok */
+    margin: 5px 0; /* Memberi jarak antar <p> */
+    padding: 5px 0; /* Menambahkan padding untuk penampilan yang lebih baik */
+}
+
+.footer{
+    text-align: center;
+    background-color: #fffcf2;
+}
+
+.error {
+    border: 1px solid #bc4749;
+}
+
+.errorText {
+    color: #bc4749;
+}
+
+.form-container {
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-between; /* Memisahkan ruang antara form dan message container */
+}
+
+form {
+    flex: 1; /* Membuat form mengambil ruang yang tersisa */
+    margin-right: 20px; /* Menambahkan margin kanan agar ada jarak */
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+#message-container {
+    border: 1px solid#808080;
+    flex: 0 0 700px;
+}
+
+@media only screen and (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        }
+
+        .portofolio-article img {
+            width: 140px; /* Ukuran gambar saat responsif */
+            height: auto; /* Menjaga proporsi gambar */
+        }
+
+    .form-container {
+        flex-direction: column; /* Ubah arah flex menjadi kolom pada layar kecil */
+    }
+
+    .message-container {
+        width: 100%; /* Memastikan message container menempati lebar penuh */
+    }
+
+    #message-container {
+        margin-top: 20px;
+        flex: 0 0 200px; /* Ukuran tetap untuk message container */
+    }
+
+    .photo-banner{
+        height: 300px;
+    }
+    }

@@ -11,7 +11,7 @@
     <header class="header">
         <!-- logo -->
          <div class="logo"></div>
-         <nav>
+         <nav class="menu">
             <a href="#section-home">Home</a>
             <a href="#section-profile">Profile</a>
             <a href="#section-portofolio">Portofolio</a>
@@ -22,13 +22,15 @@
     <main>
         <section id="section-home">
             <header>
-                <h1>Hai User, Selamat Datang di Nathaflora</h1>
+                <h1>Hai <span id="nama-user"></span>, Selamat Datang di Nathaflora</h1>
             </header>
 
             <article>
                 <p>Kami berkomitmen untuk memberikan pengalaman terbaik melalui layanan profesional, bunga berkualitas, dan kreativitas tanpa batas dalam setiap rangkaian yang kami buat 🌸</p>
                 <div class="photo-banner">
-
+                    <img class="img-slideshow" src="assets/banner1.png" alt="Banner1">
+                    <img class="img-slideshow" src="assets/banner2.png" alt="Banner2">
+                    <img class="img-slideshow" src="assets/banner3.png" alt="Banner3">
                 </div>
             </article>
         </section>
@@ -71,14 +73,6 @@
                         <td>Yogyakarta</td>
                     </tr>
                 </table>
-                <!-- <div class="lokasi">
-                    <div class="lokasi-1">Bali</div>
-                    <div class="lokasi-2">Jakarta</div>
-                    <div class="lokasi-3"></div>
-                    <div class="lokasi-4"></div>
-                    <div class="lokasi-5"></div>
-                </div> -->
-                <!-- <p>Nathaflora tidak hanya menjual bunga, tetapi juga menciptakan koneksi emosional antara orang-orang melalui keindahan dan simbolisme bunga. Kami berkomitmen untuk memberikan pengalaman terbaik melalui layanan profesional, bunga berkualitas, dan kreativitas tanpa batas dalam setiap rangkaian yang kami buat 🌸.</p> -->
             </article>
         </section>
         <hr/>
@@ -135,17 +129,52 @@
             <header>
                 <h1>Message Us</h1>
             </header>
-            <div>
-                <form action=""></form>
-                <div class="message-container"></div>
+            <div class="form-container">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td><label for="nama">Nama</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="nama" id="nama"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="tanggal-lahir">Tanggal Lahir</label></td>
+                            <td>:</td>
+                            <td><input type="date" name="tanggal-lahir" id="tanggal-lahir"/></td>
+                        </tr>
+                        <tr class="radio">
+                            <td><label for="jenis-kelamin">Jenis Kelamin</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" name="jenis-kelamin" id="laki-laki" value="Laki-laki">Laki-Laki
+                                <input type="radio" name="jenis-kelamin" id="perempuan" value="Perempuan">Perempuan
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="pesan">Pesan</label></td>
+                            <td>:</td>
+                            <td><textarea name="pesan" id="pesan" rows="5" cols="50"></textarea></td>
+                        </tr>
+                    </table>
+                    <button type="submit" id="kirim">Submit</button>
+                </form>                
+                <div class="hidden message-containe" id="message-container">
+                    <p><b>Current Time: </b><span id="waktu-dari-input"> </span></p>
+                    <br>
+                    <p><b>Nama: </b><span id="nama-dari-input"> </span></p>
+                    <p><b>Tanggal Lahir: </b><span id="tl-dari-input"> </span></p>
+                    <p><b>Jenis Kelamin: </b><span id="jk-dari-input"> </span></p>
+                    <p><b>Pesan: </b><span id="pesan-dari-input"> </span></p>
+                </div>
             </div>
         </section>
     </main>
     <hr/>
     <footer>
-        <div>
+        <div class="footer">
             © Nathaflora 2024
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
